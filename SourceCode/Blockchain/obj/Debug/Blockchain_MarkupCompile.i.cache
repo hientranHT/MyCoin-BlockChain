@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Nam_4\CCNMTPTPM\Blockchain\Blockchain\Blockchain\obj\Debug\
+D:\Nam_4\CCNMTPTPM\Blockchain\MyCoin-BlockChain\SourceCode\Blockchain\obj\Debug\
 Blockchain
 none
 false
 DEBUG;TRACE
-D:\Nam_4\CCNMTPTPM\Blockchain\Blockchain\Blockchain\App.xaml
-11151548125
+D:\Nam_4\CCNMTPTPM\Blockchain\MyCoin-BlockChain\SourceCode\Blockchain\App.xaml
+7811343906
 
-9-833062280
-131569487696
-MainWindow.xaml;
+17-1813419513
+15-269500934
+MainWindow.xaml;ViewModel\AccountInfor.xaml;ViewModel\CreateWallet.xaml;ViewModel\HistoryExchange.xaml;ViewModel\Home.xaml;ViewModel\Login.xaml;ViewModel\SendCoin.xaml;
 
 True
 

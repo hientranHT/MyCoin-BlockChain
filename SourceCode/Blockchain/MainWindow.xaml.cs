@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Blockchain.Model;
+using Blockchain.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,37 @@ namespace Blockchain
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Login LoginScreen = (new Login());
+            LoginScreen.Show();
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(HomeSingleton.Instance);
+        }
+
+        private void CreateWallet_Clik(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(CreateWalletSingleton.Instance);
+        }
+
+        private void AccountInfor_Click(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(AccountInforSingleton.Instance);
+        }
+
+        private void SendCoin_Click(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(SendCoinSingleton.Instance);
+        }
+
+        private void HistoryExchange_Click(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(HistoryExchangeSingleton.Instance);
         }
     }
 }
