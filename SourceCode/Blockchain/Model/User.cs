@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,12 +42,22 @@ namespace Blockchain.Model
         public string UserName { get; set; }
         public string PassWord { get; set; }
         public string PassWordConfirm { get; set; }
+        public string PrivateKey { get; set; }
+        public int Money { get; set; }
 
         public UserRegister(string inputusername, string inputpassword, string inputpasswordconfirm)
         {
             UserName = inputusername;
             PassWord = inputpassword;
             PassWordConfirm = inputpasswordconfirm;
+            PrivateKey = CreatePrivateKey(inputusername);
+            Money = 0;
+        }
+
+        private string CreatePrivateKey(string username)
+        {
+            var info = new FileInfo(username);
+            return $"{Guid.NewGuid()}{info.Extension}";
         }
 
         public bool CheckPasswordandpasswordconfirm()
@@ -80,7 +91,9 @@ namespace Blockchain.Model
         {
             Database.Intance.Data.Element("root").Element("Users").Add(new XElement("User",
                                                                         new XElement("UserName", UserName),
-                                                                        new XElement("PassWord", PassWord)));
+                                                                        new XElement("PassWord", PassWord),
+                                                                        new XElement("PrivateKey", PassWord),
+                                                                        new XElement("Money", PassWord)));
             Database.UpdateDatabase();
         }
     }
@@ -89,6 +102,43 @@ namespace Blockchain.Model
     {
         public static string UserName { get; set; }
         public static string PassWord { get; set; }
+    }
+
+    //class TxOut
+    //{
+    //    public string Address { get; set; }
+    //    public int Amount { get; set; }
+
+    //    public TxOut(string address, int amount)
+    //    {
+    //        Address = address;
+    //        Amount = amount;
+    //    }
+    //}
+
+    //class TxIn
+    //{
+    //    public string TxOutId { get; set; }
+    //    public int TxOutIndex { get; set; }
+    //    public string Signature { get; set; }
+    //}
+    public class Transaction
+    {
+        //public string TransactionId { get; set; }
+        //public List<TxIn> txIns;
+        //public List<TxOut> txOuts;
+        public string Sender { get; set; }
+        public string Receiver { get; set; }
+        public int Amount { get; set; }
+        public string Miner { get; set; }
+
+        public Transaction(string sender, string receiver, int amount, string miner)
+        {
+            Sender = sender;
+            Receiver = receiver;
+            Amount = amount;
+            Miner = miner;
+        }
     }
 
 }

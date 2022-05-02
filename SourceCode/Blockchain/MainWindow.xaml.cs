@@ -26,7 +26,7 @@ namespace Blockchain
         {
             InitializeComponent();
         }
-
+        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Login LoginScreen = (new Login());
@@ -40,7 +40,8 @@ namespace Blockchain
 
         private void CreateWallet_Clik(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(CreateWalletSingleton.Instance);
+            Login LoginScreen = (new Login());
+            LoginScreen.Show();
         }
 
         private void AccountInfor_Click(object sender, RoutedEventArgs e)

@@ -9,6 +9,13 @@
       Title="SendCoin" Background="White" Loaded="Page_Loaded">
 
     <Grid>
-        
+        <StackPanel Width="400">
+            <Label Height="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Send Coin</Label>
+            <Label Height="30" FontSize="15">Wallet receive</Label>
+            <TextBox Height="30" Name="WalletTo" FontSize="15" Padding="10,5,0,0" Margin="5"></TextBox>
+            <Label Height="30" FontSize="15">Amount</Label>
+            <TextBox Height="30" Name="Amount" FontSize="15" Padding="10,5,0,0" Margin="5"></TextBox>
+            <Button Content="Send" Height="50" Width="150"  Click="Send_Click"  Margin="125,0"  />
+        </StackPanel>
     </Grid>
 </Page>

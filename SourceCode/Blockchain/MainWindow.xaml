@@ -10,10 +10,10 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal" Height="40" Background="Blue">
                 <Button Content="Home" Click="Home_Click" Height="50" Width="200"></Button>
-                <Button Content="Create Wallet" Click="CreateWallet_Clik" Height="50" Width="200"></Button>
                 <Button Content="Account Information" Click="AccountInfor_Click" Height="50" Width="200"></Button>
                 <Button Content="Send Coin" Click="SendCoin_Click" Height="50" Width="200"></Button>
                 <Button Content="History" Click="HistoryExchange_Click" Height="50" Width="200"></Button>
+                <Button Content="Log Out" Click="CreateWallet_Clik" Height="50" Width="200"></Button>
             </StackPanel>
             <DockPanel  >
                 <Frame x:Name="frame"></Frame>

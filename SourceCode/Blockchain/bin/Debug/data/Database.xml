@@ -3,10 +3,20 @@
     <User>
       <UserName>Hien</UserName>
       <PassWord>Hien</PassWord>
+      <PrivateKey>Hien</PrivateKey>
+      <Money>1000</Money>
     </User>
     <User>
       <UserName>Hien1</UserName>
       <PassWord>Hien1</PassWord>
+      <PrivateKey>Hien1</PrivateKey>
+      <Money>1000</Money>
+    </User>
+     <User>
+      <UserName>Miner</UserName>
+      <PassWord>Miner</PassWord>
+      <PrivateKey>Miner</PrivateKey>
+      <Money>1000</Money>
     </User>
   </Users>
 </root>

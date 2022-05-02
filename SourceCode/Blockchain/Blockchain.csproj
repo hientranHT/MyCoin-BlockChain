@@ -63,13 +63,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\BlockChain.cs" />
     <Compile Include="Model\MainModel.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Wallet.cs" />
     <Compile Include="ViewModel\AccountInfor.xaml.cs">
       <DependentUpon>AccountInfor.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\CreateWallet.xaml.cs">
-      <DependentUpon>CreateWallet.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\HistoryExchange.xaml.cs">
       <DependentUpon>HistoryExchange.xaml</DependentUpon>
@@ -96,10 +95,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ViewModel\AccountInfor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ViewModel\CreateWallet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

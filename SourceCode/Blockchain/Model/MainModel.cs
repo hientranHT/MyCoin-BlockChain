@@ -29,22 +29,6 @@ namespace Blockchain.Model
         }
     }
 
-    class CreateWalletSingleton
-    {
-        private static CreateWallet _instance = null;
-        public static CreateWallet Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new CreateWallet();
-                }
-                return _instance;
-            }
-        }
-    }
-
     class AccountInforSingleton
     {
         private static AccountInfor _instance = null;

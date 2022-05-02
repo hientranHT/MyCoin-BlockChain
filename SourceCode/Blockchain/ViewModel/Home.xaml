@@ -7,8 +7,39 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home" Background="White" Loaded="Page_Loaded">
-
     <Grid>
-        
+        <StackPanel >
+            <Label Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Home</Label>
+            <ScrollViewer Height="400">
+                <StackPanel >
+                    <TextBlock Text="BlockChain" Margin="10" FontSize="22" HorizontalAlignment="Center"/>
+                    <StackPanel Margin="20 0">
+                        <ItemsControl Name="ListBlock"  HorizontalAlignment="Center">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border  Width="500" Height="200" >
+                                        <StackPanel>
+                                            <Border Width="500" Height="200" CornerRadius="5" Margin="5" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                                                <StackPanel >
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5" Text="{Binding PreviousHash}" FontSize="15" />
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5 0" Text="{Binding Hash}" FontSize="15"/>
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5 0" Text="{Binding Data}" FontSize="15"/>
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5 0" Text="{Binding Nonce}" FontSize="15"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </Page>
