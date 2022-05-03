@@ -7,8 +7,14 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AccountInfor" Background="White" Loaded="Page_Loaded">
-
     <Grid>
+        <StackPanel>
+            <Label Height="50" FontSize="25" HorizontalContentAlignment="Center">Account Information</Label>
+            <Label Height="50" FontSize="25" >Username:</Label>
+            <TextBlock HorizontalAlignment="Left" Margin="5" Name ="UserName" FontSize="15" />
+            <Label Height="50" FontSize="25" >Money:</Label>
+            <TextBlock HorizontalAlignment="Left" Margin="5" Name ="Money" FontSize="15" />
+        </StackPanel>
         
     </Grid>
 </Page>

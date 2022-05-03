@@ -31,6 +31,10 @@ namespace Blockchain
         {
             Login LoginScreen = (new Login());
             LoginScreen.Show();
+
+            MyBlockChain.blockChain.AddBlock(new Model.Block(DateTime.Now, null, new Transaction("System", "Admin", 1000, "Miner")));
+            MyBlockChain.blockChain.AddBlock(new Model.Block(DateTime.Now, null, new Transaction("Admin", "Hien", 100, "Miner")));
+            MyBlockChain.blockChain.AddBlock(new Model.Block(DateTime.Now, null, new Transaction("Admin", "Hien1", 100, "Miner")));
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

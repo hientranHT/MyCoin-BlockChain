@@ -43,7 +43,7 @@ namespace Blockchain.Model
         public string PassWord { get; set; }
         public string PassWordConfirm { get; set; }
         public string PrivateKey { get; set; }
-        public int Money { get; set; }
+       
 
         public UserRegister(string inputusername, string inputpassword, string inputpasswordconfirm)
         {
@@ -51,7 +51,6 @@ namespace Blockchain.Model
             PassWord = inputpassword;
             PassWordConfirm = inputpasswordconfirm;
             PrivateKey = CreatePrivateKey(inputusername);
-            Money = 0;
         }
 
         private string CreatePrivateKey(string username)
@@ -139,6 +138,25 @@ namespace Blockchain.Model
             Amount = amount;
             Miner = miner;
         }
+
+        public Transaction()
+        {
+            Sender = "";
+            Receiver = "";
+            Amount = 0;
+            Miner = "";
+        }
     }
 
+    public class InforUser
+    {
+        public string UserName { get; set; }
+        public int Money { get; set; }
+
+        public InforUser(string inputusername)
+        {
+            UserName = inputusername;
+            Money = MyBlockChain.blockChain.HowManyMoney(inputusername);
+        }
+    }
 }

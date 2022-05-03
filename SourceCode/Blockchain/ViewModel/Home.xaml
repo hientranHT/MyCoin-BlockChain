@@ -17,13 +17,19 @@
                         <ItemsControl Name="ListBlock"  HorizontalAlignment="Center">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <Border  Width="500" Height="200" >
+                                    <Border  Width="500" Height="300" >
                                         <StackPanel>
-                                            <Border Width="500" Height="200" CornerRadius="5" Margin="5" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                                            <Border Width="500" Height="300" CornerRadius="5" Margin="5" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
                                                 <StackPanel >
+                                                    <Label>Block Index</Label>
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5" Text="{Binding Index}" FontSize="15" />
+                                                    <Label>Transaction:</Label>
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5" Text="{Binding Message}" FontSize="15" />
+                                                    <Label>PreviousHash: </Label>
                                                     <TextBlock HorizontalAlignment="Left" Margin="5" Text="{Binding PreviousHash}" FontSize="15" />
+                                                    <Label>Hash: </Label>
                                                     <TextBlock HorizontalAlignment="Left" Margin="5 0" Text="{Binding Hash}" FontSize="15"/>
-                                                    <TextBlock HorizontalAlignment="Left" Margin="5 0" Text="{Binding Data}" FontSize="15"/>
+                                                    <Label>Nonce: </Label>
                                                     <TextBlock HorizontalAlignment="Left" Margin="5 0" Text="{Binding Nonce}" FontSize="15"/>
                                                 </StackPanel>
                                             </Border>

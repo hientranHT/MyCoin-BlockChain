@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blockchain.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,9 @@ namespace Blockchain.ViewModel
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            InforUser inforUser = new InforUser(UserLogged.UserName);
+            UserName.Text = inforUser.UserName;
+            Money.Text = inforUser.Money.ToString();
         }
     }
 }

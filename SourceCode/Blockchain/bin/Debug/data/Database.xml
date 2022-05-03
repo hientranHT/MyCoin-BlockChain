@@ -1,22 +1,30 @@
 <root>
   <Users>
     <User>
+      <UserName>Admin</UserName>
+      <PassWord>Admin</PassWord>
+      <PrivateKey>Admin</PrivateKey>
+    </User>
+    <User>
       <UserName>Hien</UserName>
       <PassWord>Hien</PassWord>
       <PrivateKey>Hien</PrivateKey>
-      <Money>1000</Money>
     </User>
     <User>
       <UserName>Hien1</UserName>
       <PassWord>Hien1</PassWord>
       <PrivateKey>Hien1</PrivateKey>
-      <Money>1000</Money>
     </User>
-     <User>
+    <User>
       <UserName>Miner</UserName>
       <PassWord>Miner</PassWord>
       <PrivateKey>Miner</PrivateKey>
-      <Money>1000</Money>
+    </User>
+    <User>
+      <UserName>Hien2</UserName>
+      <PassWord>Hien2</PassWord>
+      <PrivateKey>Hien2</PrivateKey>
+      <Money>Hien2</Money>
     </User>
   </Users>
 </root>

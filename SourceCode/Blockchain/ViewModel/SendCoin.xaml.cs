@@ -44,9 +44,24 @@ namespace Blockchain.ViewModel
             {
                 if (CheckInputAmount(InputAmount))
                 {
-                    Transaction transaction = new Transaction(UserLogged.UserName, Receiver, int.Parse(InputAmount), Miner);
-                    MyBlockChain.blockChain.AddBlock(new Model.Block(DateTime.Now, null, transaction));
-                    MessageBox.Show("Send money successfully");
+                   
+                    if(CheckReceiverIsUserLogged(Receiver))
+                    {
+                        MessageBox.Show("Cannot send money to YOUR WALLET");
+                    }
+                    else
+                    {
+                        if(CheckMoneyToSend(int.Parse(InputAmount)))
+                        {
+                            Transaction transaction = new Transaction(UserLogged.UserName, Receiver, int.Parse(InputAmount), Miner);
+                            MyBlockChain.blockChain.AddBlock(new Model.Block(DateTime.Now, null, transaction));
+                            MessageBox.Show("Send money successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cannot send money because MONEY IN YOUR WALLET IS NOT ENOUGH");
+                        }
+                    }
                 }
                 else
                 {
@@ -76,6 +91,25 @@ namespace Blockchain.ViewModel
                 return false;
             }
             return true;
+        }
+
+        private bool CheckReceiverIsUserLogged(string Receiver)
+        {
+            if (Receiver == UserLogged.UserName)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool CheckMoneyToSend(int amount)
+        {
+            InforUser inforUser = new InforUser(UserLogged.UserName);
+            if (amount < inforUser.Money)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
