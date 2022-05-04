@@ -87,6 +87,17 @@ namespace Blockchain.Model
             }
         }
 
+        internal void CopyToBlockBindingListOfYourWallet(BindingList<Block> blockList)
+        {
+            for (int i = 0; i < Chain.Count; i++)
+            {
+                if(Chain[i].Data.Sender == UserLogged.UserName || Chain[i].Data.Receiver == UserLogged.UserName || Chain[i].Data.Miner == UserLogged.UserName)
+                {
+                    blockList.Add(Chain[i]);
+                }
+            }
+        }
+
         public int HowManyMoney(string username)
         {
             int money = 0;

@@ -97,7 +97,7 @@ namespace Blockchain.Model
         public static void UpdateDatabase()
         {
             var path = AppDomain.CurrentDomain.BaseDirectory;
-            path += @"\data\Database.xml";
+            path += @"\utils\util.xml";
 
             File.WriteAllText(path, Database.Intance.Data.ToString());
         }
@@ -105,7 +105,7 @@ namespace Blockchain.Model
         private Database()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory;
-            string XMLpath = path + @"\data\Database.xml";
+            string XMLpath = path + @"\utils\util.xml";
 
             string XMLtext = File.ReadAllText(XMLpath);
             this.Data = new XDocument(XDocument.Parse(XMLtext));

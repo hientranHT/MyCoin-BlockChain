@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel >
-            <Label Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">History</Label>
+            <Label Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Transaction History Of BlockChain</Label>
             <ScrollViewer Height="400">
                 <StackPanel >
                     <StackPanel Margin="20 0">

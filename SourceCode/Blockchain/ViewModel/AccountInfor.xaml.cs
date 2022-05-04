@@ -1,6 +1,7 @@
 ﻿using Blockchain.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,10 @@ namespace Blockchain.ViewModel
             InforUser inforUser = new InforUser(UserLogged.UserName);
             UserName.Text = inforUser.UserName;
             Money.Text = inforUser.Money.ToString();
+
+            BindingList<Model.Block> BlockList = new BindingList<Model.Block>();
+            MyBlockChain.blockChain.CopyToBlockBindingListOfYourWallet(BlockList);
+            ListBlock.ItemsSource = BlockList;
         }
     }
 }

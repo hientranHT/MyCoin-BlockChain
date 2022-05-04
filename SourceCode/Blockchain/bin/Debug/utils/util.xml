@@ -26,5 +26,11 @@
       <PrivateKey>Hien2</PrivateKey>
       <Money>Hien2</Money>
     </User>
+    <User>
+      <UserName>Hien3</UserName>
+      <PassWord>Hien3</PassWord>
+      <PrivateKey>Hien3</PrivateKey>
+      <Money>Hien3</Money>
+    </User>
   </Users>
 </root>

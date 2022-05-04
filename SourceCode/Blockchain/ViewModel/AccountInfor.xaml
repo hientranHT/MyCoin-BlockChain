@@ -14,7 +14,35 @@
             <TextBlock HorizontalAlignment="Left" Margin="5" Name ="UserName" FontSize="15" />
             <Label Height="50" FontSize="25" >Money:</Label>
             <TextBlock HorizontalAlignment="Left" Margin="5" Name ="Money" FontSize="15" />
-        </StackPanel>
         
+            <Label Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Transaction History of YOUR WALLET</Label>
+            <ScrollViewer Height="400">
+                <StackPanel >
+                    <StackPanel Margin="20 0">
+                        <ItemsControl Name="ListBlock"  HorizontalAlignment="Center">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border  Width="500" Height="150" >
+                                        <StackPanel>
+                                            <Border Width="500" Height="150" CornerRadius="5" Margin="5" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                                                <StackPanel >
+                                                    <Label>Transaction:</Label>
+                                                    <TextBlock HorizontalAlignment="Left" Margin="5" Text="{Binding Message}" FontSize="15" />
+                                                </StackPanel>
+                                            </Border>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
     </Grid>
 </Page>
