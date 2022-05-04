@@ -1,0 +1,19 @@
+
+UserName: Admin
+PassWord: Admin
+Coin: 1000 - 100 - 100 = 800
+
+UserName: Hien
+PassWord: Hien
+Coin: 0 + 100 = 100
+
+
+UserName: Hien1
+PassWord: Hien1
+Coin: 0 + 100 = 100
+
+UserName: Miner
+PassWord: Miner
+Coin: 0 + 10 + 10 + 10= 30 (3 giao dịch và Miner có 30 coin 
+1 lần do System gửi coin cho Admin, 1 lần Admin gửi cho Hien, 1 lần Admin gửi cho Hien1)
+ 

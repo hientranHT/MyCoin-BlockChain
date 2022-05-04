@@ -1,0 +1,24 @@
+<root>
+  <Users>
+    <User>
+      <UserName>Admin</UserName>
+      <PassWord>Admin</PassWord>
+      <PrivateKey>Admin</PrivateKey>
+    </User>
+    <User>
+      <UserName>Hien</UserName>
+      <PassWord>Hien</PassWord>
+      <PrivateKey>Hien</PrivateKey>
+    </User>
+    <User>
+      <UserName>Hien1</UserName>
+      <PassWord>Hien1</PassWord>
+      <PrivateKey>Hien1</PrivateKey>
+    </User>
+    <User>
+      <UserName>Miner</UserName>
+      <PassWord>Miner</PassWord>
+      <PrivateKey>Miner</PrivateKey>
+    </User>
+  </Users>
+</root>

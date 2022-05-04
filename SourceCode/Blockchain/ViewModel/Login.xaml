@@ -31,7 +31,7 @@
 
         <StackPanel Grid.Row="0" Grid.Column="1" >
             <StackPanel Height="350">
-                <Label Height="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Register</Label>
+                <Label Height="100" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Register Wallet</Label>
                 <Label Height="30" FontSize="15">UserName</Label>
                 <TextBox Height="30" Name="RegisterUserName" FontSize="15" Padding="10,5,0,0" Margin="5"></TextBox>
                 <Label Height="30" FontSize="15">Password</Label>

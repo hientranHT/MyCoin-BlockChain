@@ -16,7 +16,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="5" Name ="Money" FontSize="15" />
         
             <Label Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25">Transaction History of YOUR WALLET</Label>
-            <ScrollViewer Height="400">
+            <ScrollViewer Height="185">
                 <StackPanel >
                     <StackPanel Margin="20 0">
                         <ItemsControl Name="ListBlock"  HorizontalAlignment="Center">
